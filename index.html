@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Moedas</title>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./assets/css/custom.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="shortcut icon" href="./assets/images/fav.png" type="image/x-icon">
+    <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+</head>
+
+<body>
+
+    <main id="conteudo-principal">
+        <div class="header text-center">
+            <lord-icon src="https://cdn.lordicon.com/qmcsqnle.json" trigger="hover">
+            </lord-icon>
+        </div>
+
+        <div class="content">
+            <div class="input-area">
+                <div class="input-box">
+                    <label for="">Valor para converter R$: </label>
+                    <input type="number" id="numero-entrada" min="1">
+                    <span>Digite o valor!</span>
+                </div>
+
+                <div class="input-box">
+                    <label>Selecione a moda: </label>
+                    <select id="moeda-escolhida">
+                        <option value="USD-BRL">USD</option>
+                        <option value="EUR-BRL">EUR</option>
+                        <option value="BTC-BRL">BTC</option>
+                    </select>
+                </div>
+
+                <button id="btn-converter">Converter</button>
+            </div>
+
+            <div class="output-area">
+                <h2>Conversões <i class="fa-solid fa-arrow-up-right-from-square" title="Saiba mais" id="abre-modal"></i></h2>
+                <h5>Moeda escolhida: <span id="moeda"></span></h5>
+                <h6>Compra: <span id="compra"></span></h6>
+                <h6>Venda: <span id="venda"></span></h6>
+                <h6>Variação: <span id="variacao"></span></h6>
+                <h6>Porcentagem de Variação: <span id="porcen"></span></h6>
+                <h6>Máximo: <span id="max"></span></h6>
+                <h6>Mínimo: <span id="min"></span></h6>
+            </div>
+
+        </div>
+
+        <div class="pages">
+            <div class="content-page">
+                <a href="./cep.html">
+                    CEP <i class="fa-solid fa-right-long"></i>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <section id="area-modal" class="modal-father">
+        <div class="modal-elemento">
+            <div class="header">
+                <i class="fa-regular fa-circle-xmark" id="botao-fechar-modal"></i>
+            </div>
+
+            <div class="content">
+                <h5>Moeda escolhida: <span id="modal-moeda"></span></h5>
+                <h6>Compra: <span id="modal-compra"></span></h6>
+                <h6>Venda: <span id="modal-venda"></span></h6>
+                <h6>Variação: <span id="modal-variacao"></span></h6>
+                <h6>Porcentagem de Variação: <span id="modal-porcen"></span></h6>
+                <h6>Máximo: <span id="modal-max"></span></h6>
+                <h6>Mínimo: <span id="modal-min"></span></h6>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
